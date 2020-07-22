@@ -5,8 +5,8 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 
-from sendMail import sendMail
-from config import CER_PATH, DATA_PATH
+from src.sendMail import sendMail
+from src.config import CER_PATH, DATA_PATH
 import os
 
 BASE_DIR = os.getcwd()
