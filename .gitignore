@@ -105,3 +105,9 @@ dist
 
 input/
 output/
+.vscode
+__pycache__
+tut.py
+*TEST
+GUI.ui
+photo.qrc

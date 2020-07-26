@@ -8,6 +8,7 @@ from PIL import ImageDraw
 from src.sendMail import sendMail
 from src.config import CER_PATH, DATA_PATH
 import os
+import time
 
 BASE_DIR = os.getcwd()
 
@@ -68,9 +69,14 @@ def run(m_data):
 
 
 if __name__ == "__main__":
+    t0 = time.time()
     try:
         df = pd.read_csv(os.path.join(os.getcwd(), DATA_PATH))
         mail_data = createDic(df, ['name', 'email'])
         run(mail_data)
     except Exception as e:
         print("ERROR : ", e)
+
+    t1 = time.time() - t0
+
+    print("Time elapsed: ", t1)
